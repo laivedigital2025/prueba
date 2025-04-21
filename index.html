@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Demos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Demos</h1>
+        <div class="form-container">
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="event">Selecciona un Evento:</label>
+                    <select id="event" name="event" required>
+                        <option value="">Cargando eventos...</option>
+                    </select>
+                </div>
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+        <div id="message" class="message"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html> 
