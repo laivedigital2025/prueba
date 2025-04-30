@@ -30,4 +30,31 @@ yarn-error.log*
 pids
 *.pid
 *.seed
-*.pid.lock 
+*.pid.lock
+
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!package.json
+!README.md
+!server.js
+!config/
+!public/
+!views/
+!routes/
+
+# And not these folders
+!config/**
+!public/**
+!views/**
+!routes/**
+
+# Keep these files in the folders
+!config/*.js
+!public/css/*.css
+!public/js/*.js
+!public/images/*
+!views/*.ejs
+!routes/*.js 
