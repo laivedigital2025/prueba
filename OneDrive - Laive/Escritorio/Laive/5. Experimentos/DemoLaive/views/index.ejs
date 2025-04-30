@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demos Laive - TEDI</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="background-shapes"></div>
+    
+    <header>
+        <img src="/images/laive-logo.png" alt="Laive" class="logo-laive">
+        <img src="/images/tedi-logo.png" alt="TEDI" class="logo-tedi">
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>¡Te invitamos a descubrir algo nuevo! 🚀</h1>
+            <p class="invitation-text">
+                Nos emociona mucho presentarte en exclusiva la DEMO DEL PROYECTO MATILDE. 
+                Después de mucho esfuerzo y dedicación, estamos listos para mostrarte el cambio 
+                que está generando en la compañía.
+            </p>
+
+            <div class="event-details">
+                <p>📅 Cuándo: Jueves 8 de mayo</p>
+                <p>🕒 Hora: 3:00 pm</p>
+                <p>📍 Dónde: Edif. Capital Golf – Piso 12 – Av. Circunvalación del Golf los Incas 154, Surco</p>
+            </div>
+
+            <form id="registroForm" class="registration-form">
+                <div class="form-group">
+                    <input type="text" id="nombreApellido" name="nombreApellido" placeholder="Nombres y Apellidos" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="correo" name="correo" placeholder="correo@laive.pe" required>
+                </div>
+                <input type="hidden" name="evento" value="Proyecto Matilde">
+                <button type="submit" class="register-button">Registrarme</button>
+            </form>
+        </section>
+
+        <section class="upcoming-demos">
+            <h2>Próximas Demos</h2>
+            <p class="section-description">Conoce las fechas de las siguientes sesiones.</p>
+            
+            <div class="demos-grid">
+                <% demos.forEach(demo => { %>
+                    <div class="demo-card">
+                        <h3><%= demo.title %></h3>
+                        <p><%= demo.description %></p>
+                        <div class="demo-details">
+                            <p class="demo-date">Fecha: <%= demo.fecha %></p>
+                            <p class="demo-location">Lugar: <%= demo.lugar %></p>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© Copyright 2025, Laive S.A. Todos los derechos reservados.</p>
+    </footer>
+
+    <div id="notification" class="notification"></div>
+
+    <script src="/js/main.js"></script>
+</body>
+</html> 
